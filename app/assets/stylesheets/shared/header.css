@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 2vw;
+  background-color: #B0C4DE;
+}
