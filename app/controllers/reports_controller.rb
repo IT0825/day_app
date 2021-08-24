@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  before_action :set_report, only: :show
 
   def index
     @reports = Report.all.order('created_at DESC')
@@ -18,9 +19,16 @@ class ReportsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def report_params
     params.require(:report).permit(:title, :text)
+  end
+
+  def set_report
+    @report = Report.find(params[:id])
   end
 end
