@@ -3,7 +3,22 @@
 }
 
 .top-page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-page-header {
   width: 100vw;
   padding: 2vh 2vw;
   background-color: #B0C4DE;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: #696969;
+}
+
+.nav-link:hover {
+  color: #000000;
 }
