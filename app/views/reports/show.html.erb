@@ -4,4 +4,40 @@
     日報の詳細
     </h1>
   </div>
+  <div class="main-show">
+    <div class= "main-show-contents">
+      <div class= "show-contents-title">
+        <label class="show-title">題名</label>
+      </div>
+      <div class="column-cotents">
+        <%= @report.title %>
+      </div>
+    </div>
+    <div class= "main-show-contents">
+      <div class= "show-contents-title">
+        <label class="show-title">本文</label>
+      </div>
+      <div class="column-cotents">
+        <%= simple_format (h(@report.text)), {}, sanitize: false, wrapper_tag: "div" %>
+      </div>
+    </div>
+    <div class= "main-show-contents">
+      <div class= "show-contents-title">
+        <label class="show-title">作成日時</label>
+      </div>
+      <div class="column-cotents">
+        <%= @report.created_at %>
+      </div>
+    </div>
+    <div class= "main-show-contents show-end">
+      <div class= "show-contents-title">
+        <label class="show-title">更新日時</label>
+      </div>
+      <div class="column-cotents">
+        <%= @report.updated_at %>
+      </div>
+    </div>
+    <%= link_to "編集", "#", method: :get, class: "btn" %>
+    <%= link_to "削除", "#", method: :delete, data: { confirm: "日報「#{@report.title}」を削除します。よろしいですか？" }, class: "btn" %>
+  </div>
 </div>

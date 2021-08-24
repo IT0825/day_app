@@ -1,0 +1,18 @@
+.main-show {
+  margin-top: 5vh;
+}
+
+.main-show-contents {
+  border-top: 2px dotted grey;
+  display: flex;
+  padding: 2vh 1vw;
+}
+
+.show-contents-title {
+  width: 20vw;
+  font-weight: bold;
+}
+
+.show-end {
+  border-bottom: 2px dotted grey;
+}
