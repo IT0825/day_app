@@ -4,3 +4,5 @@ ja:
       report:
         title: 題名
         text: 本文
+      user:
+        name: 名前
