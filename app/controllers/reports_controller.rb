@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :set_report, only: :show
+  before_action :set_report, only: [:edit, :show, :update]
 
   def index
     @reports = Report.all.order('created_at DESC')
@@ -20,6 +20,17 @@ class ReportsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @report.update(report_params)
+      redirect_to root_path, notice: "日報「#{@report.title}」を更新しました。"
+    else
+      render :edit
+    end
   end
 
   private
