@@ -1,0 +1,25 @@
+
+
+.form-text-wrap {
+  padding-top: 2vh;
+  padding-bottom: 0.5vh;
+}
+
+.form-text {
+  color: #696969;
+}
+
+.indispensable {
+  padding-left: 1.5vh;
+  color: brown;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border: 1px solid 696969;
+  border-radius: 0.3em;
+  background-color: #f5f5f5;
+}
