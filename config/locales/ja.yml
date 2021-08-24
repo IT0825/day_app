@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      report:
+        title: 題名
+        text: 本文
