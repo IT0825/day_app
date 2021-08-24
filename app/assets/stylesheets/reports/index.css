@@ -40,13 +40,28 @@
 }
 
 .report-column-title {
-  width: 60vw;
+  width: 50vw;
 }
 
 .report-column-time {
-  width: 40vw;
+  width: 50vw;
 }
 
 .column-title {
   font-size: 2vh;
+}
+
+.report-contents {
+  display: flex;
+  align-items: center;
+  padding: 0.5vh 1vw;
+  border-bottom: 2px dotted grey;
+}
+
+.report-contents-title {
+  width: 39vw;
+}
+
+ .link-btn {
+  margin-left: 3vw;
 }

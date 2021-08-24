@@ -1,0 +1,12 @@
+<%= link_to "#", method: :get, class: "show-link" do %>
+  <div class= "report-contents">
+    <div class= "report-contents-title">
+      <%= report.title %>
+    </div>
+    <div class= "report-contents-time">
+      <%= report.created_at %>
+      <%= link_to "編集", "#", class: "btn link-btn" %>
+      <%= link_to "削除", "#", method: :delete, data: { confirm: "日報「#{report.title}」を削除します。よろしいですか？" }, class: "btn link-btn" %>
+    </div>
+  </div>
+<% end %>
