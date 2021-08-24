@@ -7,7 +7,7 @@
   <%= form_with model: @user, url: user_session_path, local: true do |f| %>
     <%# <%= render 'shared/error_messages', model: f.object %>
 
-    <div class='login-flash-message'>
+    <div class='error-alert'>
       <%= flash[:notice] %>
       <%= flash[:alert] %>
     </div>
