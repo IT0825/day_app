@@ -13,9 +13,13 @@
   background-color: #B0C4DE;
 }
 
+.nav-lists {
+  display: flex;
+}
+
 .nav-link {
   text-decoration: none;
-  display: block;
+  padding: 0 2vw;
   color: #696969;
 }
 
