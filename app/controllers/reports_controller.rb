@@ -33,6 +33,12 @@ class ReportsController < ApplicationController
     end
   end
 
+  def destroy
+    report = Report.find(params[:id])
+    report.destroy
+    redirect_to root_path, notice: "日報「#{report.title}」を削除しました。"
+  end
+
   private
 
   def report_params
