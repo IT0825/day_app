@@ -42,7 +42,7 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:title, :text)
+    params.require(:report).permit(:title, :text).merge(user_id: current_user.id)
   end
 
   def set_report
