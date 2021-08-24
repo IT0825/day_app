@@ -37,7 +37,7 @@
         <%= @report.updated_at %>
       </div>
     </div>
-    <%= link_to "編集", "#", method: :get, class: "btn" %>
+    <%= link_to "編集", edit_report_path(@report.id), method: :get, class: "btn" %>
     <%= link_to "削除", "#", method: :delete, data: { confirm: "日報「#{@report.title}」を削除します。よろしいですか？" }, class: "btn" %>
   </div>
 </div>
