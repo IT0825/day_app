@@ -24,3 +24,22 @@
 .btn:active {
   background-color:#c0c0c0;
 }
+
+.report-column {
+  border-bottom: 3px double grey;
+  padding: 1.5vh 1vw 0vh 1vh;
+  margin-top: 0.5vh;
+  display: flex;
+}
+
+.report-column-title {
+  width: 60vw;
+}
+
+.report-column-time {
+  width: 40vw;
+}
+
+.column-title {
+  font-size: 2vh;
+}
