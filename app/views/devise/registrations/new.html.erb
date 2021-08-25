@@ -1,10 +1,10 @@
 <div class= "main">
   <div class= "title-contents">
     <h1 class= "page-title">
-    管理者登録
+    ユーザー登録
     </h1>
   </div>
-  <%= form_with model: @admin, url: admin_registration_path, local: true do |f| %>
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
     <%= render 'shared/error_messages', model: f.object %>
     <div class="form-group">
       <div class='form-text-wrap'>
