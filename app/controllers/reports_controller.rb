@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :show, :update]
+  before_action :move_to_index, only: [:edit, :show]
 
   def index
     @reports = current_user.reports.order('created_at DESC')
@@ -47,5 +48,9 @@ class ReportsController < ApplicationController
 
   def set_report
     @report = Report.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path if current_user.id != @report.user.id
   end
 end
