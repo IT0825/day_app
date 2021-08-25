@@ -55,8 +55,13 @@ class ReportsController < ApplicationController
   def set_report
     @report = Report.find(params[:id])
   end
-
+  
   def move_to_index
-    redirect_to root_path if current_user.id != @report.user.id
+    if user_signed_in?
+      redirect_to root_path if current_user.id != @report.user.id
+    elsif admin_signed_in?
+    else
+      redirect_to root_path
+    end
   end
 end
