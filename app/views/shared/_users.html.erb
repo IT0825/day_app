@@ -1,0 +1,12 @@
+<%= link_to user_path(user.id), method: :get, class: "show-link" do %>
+  <div class= "report-contents">
+    <div class= "report-contents-title">
+      <%= user.name %>
+    </div>
+    <div class= "report-contents-time">
+      <%= user.created_at %>
+      <%= link_to "編集", "#", class: "btn link-btn" %>
+      <%= link_to "削除", "#", method: :delete, class: "btn link-btn" %>
+    </div>
+  </div>
+<% end %>
