@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:show, :edit]
+  before_action :metastasis_index, except: [:index, :show,]
 
   def index
     if admin_signed_in?
@@ -62,6 +63,12 @@ class ReportsController < ApplicationController
     elsif admin_signed_in?
     else
       redirect_to root_path
+    end
+  end
+
+  def metastasis_index
+    unless user_signed_in?
+      redirect_to action: :index
     end
   end
 end
