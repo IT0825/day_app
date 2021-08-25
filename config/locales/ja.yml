@@ -6,3 +6,7 @@ ja:
         text: 本文
       user:
         name: 名前
+      admin:
+        Email: メールアドレス
+        Password: パスワード
+        Name: 名前
