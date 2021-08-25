@@ -4,7 +4,7 @@
       <%= report.title %>
     </div>
     <div class= "report-contents-time">
-      <%= report.created_at %>
+      <%= l report.created_at %>
       <% if user_signed_in? %>
        <%= link_to "編集", edit_report_path(report.id), class: "btn link-btn" %>
       <% end %>

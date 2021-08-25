@@ -10,3 +10,8 @@ ja:
         Email: メールアドレス
         Password: パスワード
         Name: 名前
+
+ja:
+  time:
+    formats:
+      default: "%Y年 %m月 %d日 %H時 %M分"
