@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   }
   root to: "reports#index"
   resources :reports
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show, :edit, :update]
 end
