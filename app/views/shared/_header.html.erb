@@ -9,7 +9,8 @@
     <% elsif admin_signed_in? %>
     　<li><%= link_to current_admin.name, "#", class: "nav-link" %></li>
       <li><%= link_to '管理者ログアウト', destroy_admin_session_path, method: :delete, class: "nav-link"  %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "nav-link" %></li>
+      <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "nav-link" %></li>
+      <li><%= link_to 'ユーザー一覧', users_path, method: :get, class: "nav-link"  %></li>
     <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "nav-link" %></li>
       <li><%= link_to '管理者ログイン', new_admin_session_path, class: "nav-link" %></li>
