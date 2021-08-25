@@ -37,7 +37,9 @@
         <%= @user.updated_at %>
       </div>
     </div>
-    <%= link_to "編集", edit_user_path(@user.id), method: :get, class: "btn" %>
-    <%= link_to "削除", "#", method: :delete, class: "btn" %>
+    <% if admin_signed_in? %>
+      <%= link_to "編集", edit_user_path(@user.id), method: :get, class: "btn" %>
+      <%= link_to "削除", "#", method: :delete, class: "btn" %>
+    <% end %>
   </div>
 </div>
