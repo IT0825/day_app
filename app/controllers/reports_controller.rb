@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :show, :update]
 
   def index
-    @reports = Report.all.order('created_at DESC')
+    @reports = current_user.reports.order('created_at DESC')
   end
   
   def new
