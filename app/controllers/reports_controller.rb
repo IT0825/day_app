@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update]
   before_action :move_to_index, only: [:show, :edit]
-  before_action :metastasis_index, except: [:index, :show,]
+  before_action :metastasis_index, except: [:index, :show, :destroy]
 
   def index
     if admin_signed_in?
