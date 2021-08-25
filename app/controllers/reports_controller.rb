@@ -3,7 +3,13 @@ class ReportsController < ApplicationController
   before_action :move_to_index, only: [:edit, :show]
 
   def index
-    @reports = current_user.reports.order('created_at DESC')
+    if admin_signed_in?
+      @reports = Report.includes(:user).order("created_at DESC")
+    elsif user_signed_in?
+      @reports = current_user.reports.order('created_at DESC')
+    else
+      redirect_to new_user_session_path
+    end
   end
   
   def new
