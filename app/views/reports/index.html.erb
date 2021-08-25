@@ -9,7 +9,9 @@
     日報一覧
     </h1>
   </div>
-  <%= link_to "新規作成", new_report_path, class: "btn" %>
+  <% if user_signed_in? %>
+    <%= link_to "新規作成", new_report_path, class: "btn" %>
+  <% end %>
   <div class= "report-column">
     <div class= "report-column-title">
      <h1 class= "column-title">
