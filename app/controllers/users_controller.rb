@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: :show
-  before_action :move_to_index, only: :show
+  before_action :set_user, only: [:show, :edit, :update]
+  before_action :move_to_index, only: [:show, :edit, :update]
 
   def index
     @users = User.all
@@ -9,10 +9,21 @@ class UsersController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to users_path, notice: "ユーザー情報「#{@user.name}」さんを更新しました。"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
   def set_user
