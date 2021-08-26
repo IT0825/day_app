@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: "reports#index"
+
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
@@ -9,7 +12,13 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-  root to: "reports#index"
-  resources :reports
+
+  resources :reports do
+    collection do
+      post :confirm
+    end
+  end
+
   resources :users, only: [:index, :show, :edit, :update, :destroy]
+  
 end
