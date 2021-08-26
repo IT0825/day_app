@@ -4,7 +4,7 @@
     日報の新規作成
     </h1>
   </div>
-  <%= form_with model: @report, local: true do |f| %>
+  <%= form_with model: @report, url: confirm_reports_path(@report), local: true do |f| %>
     <%= render "shared/error_messages", model: f.object %>
     <%= render partial: "shared/form", locals: { f: f } %>
     <%= f.submit "作成する", class: "btn" %>

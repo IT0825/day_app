@@ -1,0 +1,31 @@
+<div class= "main">
+  <div class= "title-contents">
+    <h1 class= "page-title">
+    登録内容の確認
+    </h1>
+  </div>
+  <div class="main-show">
+    <div class= "main-show-contents">
+      <div class= "show-contents-title">
+        <label class="show-title">題名</label>
+      </div>
+      <div class="column-cotents">
+        <%= @report.title %>
+      </div>
+    </div>
+    <div class= "main-show-contents">
+      <div class= "show-contents-title">
+        <label class="show-title">本文</label>
+      </div>
+      <div class="column-cotents">
+        <%= simple_format (h(@report.text)), {}, sanitize: false, wrapper_tag: "div" %>
+      </div>
+    </div>
+    <%= form_with model: @report, local: true do |f| %>
+      <%= f.hidden_field :title, autofocus: true, class: 'form-control', id: 'report_title' %>
+      <%= f.hidden_field :text, rows: 5, class: 'form-control', id: 'report_text' %>
+      <%= f.submit "作成する", class: "btn" %>
+      <%= f.submit "修正する", name: :back, class: "btn" %>
+    <% end %>
+  </div>
+</div>

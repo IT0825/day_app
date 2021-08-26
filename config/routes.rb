@@ -15,10 +15,10 @@ Rails.application.routes.draw do
 
   resources :reports do
     collection do
-      post :confirm
+      post :confirm, action: :confirm
     end
   end
 
   resources :users, only: [:index, :show, :edit, :update, :destroy]
-  
+
 end
