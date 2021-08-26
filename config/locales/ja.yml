@@ -1,11 +1,11 @@
 ja:
   activerecord:
     attributes:
+      user:
+        name: 名前
       report:
         title: 題名
         text: 本文
-      user:
-        name: 名前
       admin:
         Email: メールアドレス
         Password: パスワード
