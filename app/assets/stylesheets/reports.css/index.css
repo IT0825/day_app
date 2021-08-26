@@ -16,14 +16,11 @@
 
 .search-group {
   padding: 0.5vh 1vw;
-}
-
-.search-group {
   display: flex;
 }
 
 .search-title {
-  width: 10%;
+  width: 15%;
   padding: 0.5vh 1vw;
 }
 

@@ -17,6 +17,12 @@
     </div>
     <%= form.search_field :title_cont, class: "search-input" %>
   </div>
+  <div class="search-group">
+    <div class='search-title'>
+    <label class="form-text">作成日時</label>
+    </div>
+    <%= form.search_field :created_at_gteq, class: "search-input" %>
+  </div>
   <div class= "search-btn">
     <%= form.submit "検索", class: "btn" %>
   </div>
