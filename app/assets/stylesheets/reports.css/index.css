@@ -14,6 +14,36 @@
   font-size: 3vh;
 }
 
+.search-group {
+  padding: 0.5vh 1vw;
+}
+
+.search-group {
+  display: flex;
+}
+
+.search-title {
+  width: 10%;
+  padding: 0.5vh 1vw;
+}
+
+.form-text {
+  font-weight: bold;
+}
+
+.search-input {
+  width: 100%;
+  margin-left: 5h;
+  padding: 0.5vh 1vw;
+  border: 1px solid 696969;
+  border-radius: 0.3em;
+  background-color: #f5f5f5;
+}
+
+.search-btn {
+  padding-bottom: 5vh;
+}
+
 .btn {
   background-color: gray;
   display: inline-block;

@@ -11,11 +11,15 @@
   </div>
 
   <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+  <div class="search-group">
     <div class='search-title'>
     <label class="form-text">題名</label>
     </div>
     <%= form.text_field :keyword, class: "search-input" %>
-    <%= form.submit "検索", class: "btn search-btn" %>
+  </div>
+  <div class= "search-btn">
+    <%= form.submit "検索", class: "btn" %>
+  </div>
   <% end %>
 
   <% if user_signed_in? %>
