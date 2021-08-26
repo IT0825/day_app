@@ -4,12 +4,8 @@ ja:
       user:
         name: 名前
       report:
-        title: 題名
+        title: タイトル
         text: 本文
-      admin:
-        Email: メールアドレス
-        Password: パスワード
-        Name: 名前
 
 ja:
   time:
