@@ -4,10 +4,8 @@ ja:
       user:
         name: 名前
       report:
-        title: タイトル
+        title: 題名
         text: 本文
-
-ja:
   time:
     formats:
       default: "%Y年 %m月 %d日 %H時 %M分"
