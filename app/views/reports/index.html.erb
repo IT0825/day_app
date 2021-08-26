@@ -46,4 +46,5 @@
   <% @reports.each do |report| %>
     <%= render partial: "shared/report", locals: { report: report } %>
   <% end %>
+  <%= paginate @reports %>
 </div>

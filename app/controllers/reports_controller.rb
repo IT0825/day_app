@@ -7,11 +7,11 @@ class ReportsController < ApplicationController
     if admin_signed_in?
       reports = Report.includes(:user).order("created_at DESC")
       @q = reports.ransack(params[:q])
-      @reports = @q.result(dictinct: true).reset
+      @reports = @q.result(dictinct: true).page(params[:page]).per(5)
     elsif user_signed_in?
       reports = current_user.reports.order('created_at DESC')
       @q = reports.ransack(params[:q])
-      @reports = @q.result(dictinct: true).reset
+      @reports = @q.result(dictinct: true).page(params[:page]).per(5)
     else
       redirect_to new_user_session_path
     end
