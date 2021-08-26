@@ -10,12 +10,12 @@
     </h1>
   </div>
 
-  <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+  <%= search_form_for @q, local: true, class: "search-form" do |form| %>
   <div class="search-group">
     <div class='search-title'>
     <label class="form-text">題名</label>
     </div>
-    <%= form.text_field :keyword, class: "search-input" %>
+    <%= form.search_field :title_cont, class: "search-input" %>
   </div>
   <div class= "search-btn">
     <%= form.submit "検索", class: "btn" %>

@@ -5,9 +5,13 @@ class ReportsController < ApplicationController
 
   def index
     if admin_signed_in?
-      @reports = Report.includes(:user).order("created_at DESC")
+      reports = Report.includes(:user).order("created_at DESC")
+      @q = reports.ransack(params[:q])
+      @reports = @q.result(dictinct: true).reset
     elsif user_signed_in?
-      @reports = current_user.reports.order('created_at DESC')
+      reports = current_user.reports.order('created_at DESC')
+      @q = reports.ransack(params[:q])
+      @reports = @q.result(dictinct: true).reset
     else
       redirect_to new_user_session_path
     end
