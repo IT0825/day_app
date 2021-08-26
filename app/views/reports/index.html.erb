@@ -9,6 +9,15 @@
     日報一覧
     </h1>
   </div>
+
+  <%= form_with(url: "#", local: true, method: :get, class: "search-form") do |form| %>
+    <div class='search-title'>
+    <label class="form-text">題名</label>
+    </div>
+    <%= form.text_field :keyword, class: "search-input" %>
+    <%= form.submit "検索", class: "btn search-btn" %>
+  <% end %>
+
   <% if user_signed_in? %>
     <%= link_to "新規作成", new_report_path, class: "btn" %>
   <% end %>
