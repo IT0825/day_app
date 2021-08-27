@@ -1,4 +1,9 @@
 <div class= "main">
+  <% if flash.notice.present? %>
+    <div class= "flash-tag">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
   <div class= "title-contents">
     <h1 class= "page-title">
     日報の詳細

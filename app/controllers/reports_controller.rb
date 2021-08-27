@@ -30,7 +30,7 @@ class ReportsController < ApplicationController
     if params[:back] || !@report.save
       render :new and return unless @report.valid?
     else
-      redirect_to root_path, notice: "日報「#{@report.title}」を作成しました。"
+      redirect_to report_path(@report.id), notice: "日報「#{@report.title}」を作成しました。"
     end
   end
 
