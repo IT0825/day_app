@@ -23,13 +23,12 @@ class ReportsController < ApplicationController
 
   def confirm
     @report = Report.new(report_params)
-    render :new unless @report.valid?
   end
 
   def create
     @report = Report.new(report_params)
     if params[:back] || !@report.save
-      render :new and return
+      render :new and return unless @report.valid?
     else
       redirect_to root_path, notice: "日報「#{@report.title}」を作成しました。"
     end
